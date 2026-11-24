@@ -25,3 +25,4 @@ dist-ssr
 
 # Secrets (never commit the service-role key)
 service-role.txt
+.env
