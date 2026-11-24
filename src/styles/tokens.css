@@ -1,0 +1,29 @@
+/* ---------------------------------------------------------------------------
+ * Design tokens — Jejak Digitalku
+ * Single source of truth for the visual system. Referenced by
+ * tailwind.config.js and by the component classes in src/index.css.
+ * ------------------------------------------------------------------------- */
+:root {
+  /* Typography */
+  --font-story: 'Inder', sans-serif;
+  --story-font-size: 36px;
+
+  /* Brand / semantic colors */
+  --color-ink: #120505; /* dialog text + primary button text */
+  --color-accent: #fdc76b; /* amber accent */
+  --color-positive: #9ef2b3; /* positive score */
+  --color-negative: #ff998c; /* negative score */
+
+  /* Narration / glass box */
+  --narration-bg: rgba(0, 0, 0, 0.4);
+  --narration-border: rgba(255, 255, 255, 0.3);
+  --narration-radius: 24px;
+
+  /* Buttons */
+  --btn-primary-bg: rgba(255, 255, 255, 0.94);
+  --btn-secondary-bg: rgba(0, 0, 0, 0.4);
+  --btn-border: rgba(255, 255, 255, 0.3);
+  --btn-radius: 18px;
+  --btn-padding: 22px 48px;
+  --btn-font-size: 34px;
+}

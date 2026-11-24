@@ -1,0 +1,370 @@
+{
+  "id": "s1-penipuan",
+  "title": "Penipuan",
+  "subtitle": "Skenario 1",
+  "startNodeId": "s1-01",
+  "totalSteps": 32,
+  "stage": {
+    "width": 1920,
+    "height": 1080
+  },
+  "notes": [
+    "image: jalur di bucket Supabase Storage publik bernama 'stories', mis. 's1-penipuan/001.jpg'. URL penuh = VITE_SUPABASE_URL + /storage/v1/object/public/stories/ + image.",
+    "Node scene: gambar adalah FRAME UTUH hasil export (teks narasi, balon, dan dialog sudah menyatu dengan gambar). Engine TIDAK boleh menambah teks di atasnya; field 'alt' hanya untuk teks alternatif (aksesibilitas).",
+    "controlsY: posisi vertikal tombol Kembali/Lanjut dalam koordinat 1920x1080.",
+    "Node ber-flag draft:true adalah teks draf, bukan dari desain.",
+    "Opsi A melompati s1-26 sampai s1-31 karena gambar s1-26 menyiratkan 'hampir tertipu'."
+  ],
+  "nodes": [
+    {
+      "id": "s1-01",
+      "type": "scene",
+      "figmaFrame": "2040:778",
+      "image": "s1-penipuan/001.jpg",
+      "next": "s1-02",
+      "alt": "Malam itu, kamu sedang bersantai di kamar setelah menyelesaikan tugas sekolah. Sambil berbaring di tempat tidur, kamu membuka media sosial untuk melihat unggahan terbaru teman-temanmu. Beberapa menit kemudian, sebuah notifikasi pesan langsung muncul di layar ponsel.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-02",
+      "type": "scene",
+      "figmaFrame": "2045:785",
+      "image": "s1-penipuan/002.jpg",
+      "next": "s1-03",
+      "alt": "Kamu kembali membaca pesan tersebut. Foto profil akun itu terlihat familiar karena menggunakan logo toko elektronik terkenal. Tawaran hadiah tersebut membuatmu penasaran sekaligus senang. Namun, kamu juga merasa sedikit aneh karena tidak pernah mengikuti program giveaway sebelumnya. Hah? Aku menang giveaway? Padahal aku nggak pernah ikut undian apa pun",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-03",
+      "type": "scene",
+      "figmaFrame": "2054:4",
+      "image": "s1-penipuan/003.jpg",
+      "next": "s1-04",
+      "alt": "Kamu mencoba membuka profil pengirim. Akun tersebut memiliki banyak pengikut dan beberapa unggahan produk elektronik. Sekilas, semuanya tampak seperti akun resmi. Ketika kamu masih memperhatikan profilnya, pesan baru kembali masuk. Lho, kenapa harus isi data sebanyak itu",
+      "controlsY": 940
+    },
+    {
+      "id": "s1-04",
+      "type": "scene",
+      "figmaFrame": "2054:5",
+      "image": "s1-penipuan/004.jpg",
+      "note": "Di Figma narasinya sama persis dengan adegan 3 (kemungkinan salinan). Dikosongkan; isi ulang jika gambar tidak memuat teks sendiri.",
+      "next": "s1-05",
+      "alt": "Adegan cerita",
+      "controlsY": 940
+    },
+    {
+      "id": "s1-05",
+      "type": "scene",
+      "figmaFrame": "2063:44",
+      "image": "s1-penipuan/005.jpg",
+      "next": "s1-06",
+      "alt": "Hah? Kamu ikut giveaway dari toko itu Nggak pernah. Tapi akun yang kirim kelihatannya mirip akun aslinya. Jangan langsung percaya, ya. Coba periksa dulu username dan link yang mereka kasih.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-06",
+      "type": "scene",
+      "figmaFrame": "2063:51",
+      "image": "s1-penipuan/006.jpg",
+      "next": "s1-07",
+      "alt": "Nadia mulai membantumu memeriksa akun tersebut. Kamu membandingkan username pengirim dengan akun resmi toko elektronik yang sebenarnya. Setelah diperhatikan lebih teliti, terdapat beberapa perbedaan pada nama pengguna dan alamat situs. Coba lihat. Username-nya beda satu huruf dari akun resmi. Terus link yang dikirim juga bukan website toko aslinya",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-07",
+      "type": "scene",
+      "figmaFrame": "2063:52",
+      "image": "s1-penipuan/007.jpg",
+      "next": "s1-08",
+      "alt": "Adegan cerita",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-08",
+      "type": "scene",
+      "figmaFrame": "2063:54",
+      "image": "s1-penipuan/008.jpg",
+      "next": "s1-09",
+      "alt": "Eh, iya! Aku tadi nggak terlalu memperhatikan bagian itu.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-09",
+      "type": "scene",
+      "figmaFrame": "2100:17",
+      "image": "s1-penipuan/009.jpg",
+      "next": "s1-10",
+      "alt": "Ini bisa jadi akun palsu yang sengaja dibuat menyerupai akun resmi supaya orang percaya",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-10",
+      "type": "scene",
+      "figmaFrame": "2100:20",
+      "image": "s1-penipuan/010.jpg",
+      "next": "s1-11",
+      "alt": "Tapi pengikutnya banyak banget. Aku kira itu akun asli.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-11",
+      "type": "scene",
+      "figmaFrame": "2100:22",
+      "image": "s1-penipuan/011.jpg",
+      "next": "s1-12",
+      "alt": "Jumlah pengikut bukan jaminan akun itu aman. Sekarang banyak akun palsu yang meniru identitas toko terkenal.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-12",
+      "type": "scene",
+      "figmaFrame": "2100:36",
+      "image": "s1-penipuan/012.jpg",
+      "next": "s1-13",
+      "alt": "Kamu kemudian membuka akun resmi toko tersebut untuk memeriksa apakah ada informasi giveaway yang sedang berlangsung. Setelah mencari beberapa saat, kamu tidak menemukan pengumuman apa pun mengenai hadiah tersebut.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-13",
+      "type": "scene",
+      "figmaFrame": "2100:39",
+      "image": "s1-penipuan/013.jpg",
+      "next": "s1-14",
+      "alt": "Aku sudah cek akun resminya. Ternyata nggak ada pengumuman giveaway seperti ini.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-14",
+      "type": "scene",
+      "figmaFrame": "2101:46",
+      "image": "s1-penipuan/014.jpg",
+      "next": "s1-15",
+      "alt": "Nah, berarti semakin mencurigakan. Jangan sampai kamu memasukkan data pribadi ke situs yang nggak jelas",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-15",
+      "type": "scene",
+      "figmaFrame": "2101:50",
+      "image": "s1-penipuan/015.jpg",
+      "next": "s1-16",
+      "alt": "Iya, untung aku belum mengisi formulirnya",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-16",
+      "type": "scene",
+      "figmaFrame": "2102:67",
+      "image": "s1-penipuan/016.jpg",
+      "note": "'Halo' dipakai di 9 frame Scene-4; hanya di sini dianggap pesan chat asli. Verifikasi visual.",
+      "next": "s1-17",
+      "alt": "Saat kamu sedang berbicara dengan Nadia, sebuah pesan baru kembali masuk. Kali ini, pengirim terlihat semakin mendesak agar kamu segera mengisi formulir. Bahkan, mereka mengancam akan membatalkan hadiah jika kamu tidak segera melakukan verifikasi. Halo Apakah kamu masih ingin mengklaim hadiah? Kesempatan kamu hampir berakhir. Segera isi formulir sekarang agar hadiah tidak dialihkan kepada orang lain!",
+      "controlsY": 940
+    },
+    {
+      "id": "s1-17",
+      "type": "scene",
+      "figmaFrame": "2103:82",
+      "image": "s1-penipuan/017.jpg",
+      "next": "s1-18",
+      "alt": "Mereka terus-terusan mengirim pesan. Aku jadi bingung harus bagaimana.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-18",
+      "type": "scene",
+      "figmaFrame": "2103:88",
+      "image": "s1-penipuan/018.jpg",
+      "next": "s1-19",
+      "alt": "Justru karena mereka terus mendesak, kamu harus lebih hati-hati. Jangan biarkan rasa takut kehilangan hadiah membuat kamu mengambil keputusan sembarangan",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-19",
+      "type": "scene",
+      "figmaFrame": "2103:92",
+      "image": "s1-penipuan/019.jpg",
+      "next": "s1-20",
+      "alt": "Kalau aku sudah terlanjur memberikan data pribadi, bagaimana?",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-20",
+      "type": "scene",
+      "figmaFrame": "2103:96",
+      "image": "s1-penipuan/020.jpg",
+      "next": "s1-21",
+      "alt": "Informasi itu bisa disalahgunakan. Makanya, jangan pernah memberikan data pribadi ke pihak yang belum jelas identitasnya.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-21",
+      "type": "scene",
+      "figmaFrame": "2103:109",
+      "image": "s1-penipuan/021.jpg",
+      "next": "s1-22",
+      "alt": "Kamu kembali melihat tautan yang dikirimkan. Kamu menyadari bahwa keputusan kecil yang kamu ambil saat itu bisa berdampak pada keamanan informasi pribadimu.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-22",
+      "type": "scene",
+      "figmaFrame": "2103:119",
+      "image": "s1-penipuan/022.jpg",
+      "next": "s1-23",
+      "alt": "Tangan memegang ponsel menampilkan chat berisi tautan yang ditunjuk kursor, latar kamar gelap",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-23",
+      "type": "scene",
+      "figmaFrame": "2103:122",
+      "image": "s1-penipuan/023.jpg",
+      "next": "s1-24",
+      "alt": "Sepertinya aku harus berhenti menanggapi pesan ini. Tapi apa yang sebaiknya aku lakukan sekarang?",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-24",
+      "type": "scene",
+      "figmaFrame": "2103:133",
+      "image": "s1-penipuan/024.jpg",
+      "next": "s1-choice",
+      "alt": "Ponsel berlayar gelap di atas kasur ungu dengan ikon perisai kunci emas yang menyala",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-choice",
+      "type": "choice",
+      "figmaFrame": "2104:138",
+      "image": "s1-penipuan/025.jpg",
+      "narration": "",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mengeklik tautan dan mengisi semua data pribadi agar hadiah bisa segera diklaim.",
+          "next": "s1-cons-A",
+          "scores": {
+            "privasi": -25,
+            "reputasi": 0,
+            "keamanan": -15
+          }
+        },
+        {
+          "id": "B",
+          "text": "Mengabaikan pesan, memblokir akun, dan melaporkannya sebagai penipuan.",
+          "next": "s1-cons-B",
+          "scores": {
+            "privasi": 5,
+            "reputasi": 0,
+            "keamanan": 10
+          }
+        },
+        {
+          "id": "C",
+          "text": "Memastikan informasi melalui akun resmi toko, kemudian melaporkan akun yang mencurigakan.",
+          "next": "s1-cons-C",
+          "scores": {
+            "privasi": 5,
+            "reputasi": 5,
+            "keamanan": 10
+          }
+        }
+      ],
+      "note": "Gambar 025 memuat kotak narasi baked-in di kiri-bawah (diverifikasi: isinya = narasi pilihan ini). Layar pilihan tidak merender narasi DOM (pola SceneScreen); layar konsekuensi menimpa kotak itu. Frame layar opsi A/B/C dan konfirmasi lama tidak dipakai. Jika Figma diekspor ulang tanpa teks, ganti gambar dan kembalikan narasi DOM."
+    },
+    {
+      "id": "s1-cons-A",
+      "type": "consequence",
+      "optionId": "A",
+      "image": "s1-penipuan/025.jpg",
+      "headline": "Datamu sudah terkirim ke pihak yang tidak dikenal.",
+      "body": "Beberapa hari kemudian, nomor ponselmu mulai menerima pesan dan telepon mencurigakan. Data yang sudah terkirim sulit ditarik kembali.",
+      "next": "s1-31",
+      "draft": true,
+      "note": "Gambar 025 memuat kotak narasi baked-in; ConsequenceScreen menimpanya (teks sudah tidak relevan setelah pilihan)."
+    },
+    {
+      "id": "s1-cons-B",
+      "type": "consequence",
+      "optionId": "B",
+      "image": "s1-penipuan/025.jpg",
+      "headline": "Kamu terhindar dari bahaya dan ikut melindungi orang lain.",
+      "body": "Akun itu diblokir dan dilaporkan, sehingga datamu aman. Namun, kamu belum memastikan sendiri apakah toko aslinya memang tidak mengadakan giveaway.",
+      "next": "s1-26",
+      "draft": true,
+      "note": "Gambar 025 memuat kotak narasi baked-in; ConsequenceScreen menimpanya (teks sudah tidak relevan setelah pilihan)."
+    },
+    {
+      "id": "s1-cons-C",
+      "type": "consequence",
+      "optionId": "C",
+      "image": "s1-penipuan/025.jpg",
+      "headline": "Kamu memastikan kebenarannya sebelum bertindak.",
+      "body": "Akun resmi toko tidak menyebut giveaway apa pun. Setelah kamu melaporkan akun palsu itu, orang lain pun ikut terlindungi.",
+      "next": "s1-26",
+      "draft": true,
+      "note": "Gambar 025 memuat kotak narasi baked-in; ConsequenceScreen menimpanya (teks sudah tidak relevan setelah pilihan)."
+    },
+    {
+      "id": "s1-26",
+      "type": "scene",
+      "figmaFrame": "2105:187",
+      "image": "s1-penipuan/026.jpg",
+      "note": "Gambar memuat kalimat 'hampir saja tertipu'; hanya cocok untuk opsi B/C, jadi jalur opsi A melompati adegan ini.",
+      "next": "s1-27",
+      "alt": "Setelah kejadian tersebut, kamu mulai memahami bahwa tidak semua pesan yang terlihat menarik di media sosial dapat dipercaya. Tawaran hadiah gratis, undian, dan kesempatan khusus sering kali digunakan oleh pelaku penipuan untuk menarik perhatian pengguna. Kamu juga menyadari bahwa informasi pribadi merupakan sesuatu yang harus dijaga dan tidak boleh diberikan sembarangan. Ternyata, aku hampir saja tertipu hanya karena tergiur hadiah.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-27",
+      "type": "scene",
+      "figmaFrame": "2105:192",
+      "image": "s1-penipuan/027.jpg",
+      "next": "s1-28",
+      "alt": "Jadi, sekarang sudah tahu, kan? Kalau dapat pesan yang menawarkan hadiah, jangan langsung percaya",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-28",
+      "type": "scene",
+      "figmaFrame": "2105:196",
+      "image": "s1-penipuan/028.jpg",
+      "next": "s1-29",
+      "alt": "Iya. Aku harus periksa dulu apakah akun dan informasinya benar-benar resmi.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-29",
+      "type": "scene",
+      "figmaFrame": "2105:200",
+      "image": "s1-penipuan/029.jpg",
+      "next": "s1-30",
+      "alt": "Betul! Jangan mudah tergiur, apalagi kalau sampai diminta mengisi data pribadi lewat link yang mencurigakan.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-30",
+      "type": "scene",
+      "figmaFrame": "2105:204",
+      "image": "s1-penipuan/030.jpg",
+      "next": "s1-31",
+      "alt": "Mulai sekarang aku bakal lebih hati-hati. Ternyata menjaga keamanan diri di media sosial itu penting banget.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-31",
+      "type": "scene",
+      "figmaFrame": "2105:208",
+      "image": "s1-penipuan/031.jpg",
+      "next": "s1-end",
+      "alt": "Di dunia digital, kewaspadaan merupakan salah satu bentuk perlindungan diri. Jangan mudah percaya pada pesan dari akun yang tidak dikenal, jangan sembarangan mengeklik tautan, dan selalu pastikan informasi melalui sumber resmi. Ingat, hadiah yang terlihat menguntungkan belum tentu aman.",
+      "controlsY": 730
+    },
+    {
+      "id": "s1-end",
+      "type": "end"
+    }
+  ]
+}

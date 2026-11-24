@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    /* The Stage is a fixed, scaled 1920x1080 canvas — the page never scrolls. */
+    overflow: hidden;
+    background: #000; /* letterbox */
+    color: #fff;
+    font-family: var(--font-story);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn {
+    font-family: var(--font-story);
+    font-size: var(--btn-font-size);
+    line-height: 1.2;
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+    border: 2px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    transition:
+      transform 150ms ease,
+      background-color 150ms ease,
+      border-color 150ms ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .btn:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .btn-primary {
+    background: var(--btn-primary-bg);
+    color: var(--color-ink);
+  }
+
+  .btn-secondary {
+    background: var(--btn-secondary-bg);
+    color: #fff;
+    border-color: var(--btn-border);
+  }
+
+  .glass-panel {
+    background: var(--narration-bg);
+    border: 2px solid var(--narration-border);
+    border-radius: var(--narration-radius);
+    color: #fff;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 26px;
+    border-radius: 999px;
+    border: 2px solid var(--narration-border);
+    background: var(--narration-bg);
+    color: #fff;
+    font-size: 26px;
+  }
+
+  .input {
+    width: 100%;
+    font-family: var(--font-story);
+    font-size: var(--story-font-size);
+    color: #fff;
+    background: var(--narration-bg);
+    border: 2px solid var(--narration-border);
+    border-radius: var(--btn-radius);
+    padding: 20px 28px;
+    outline: none;
+    transition: border-color 150ms ease;
+  }
+
+  .input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .input:focus {
+    border-color: var(--color-accent);
+  }
+
+  /* Visible focus for every interactive element (keyboard users). */
+  .input:focus-visible,
+  button.pill:focus-visible,
+  button.glass-panel:focus-visible,
+  .link:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .link {
+    font: inherit;
+    color: var(--color-accent);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+/* Subtle fade between story nodes (250 ms, within the 200-300 ms range). */
+@keyframes screen-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.screen-fade {
+  animation: screen-fade 250ms ease;
+}
+
+/* Respect users who prefer reduced motion: no fades, no hover lift. */
+@media (prefers-reduced-motion: reduce) {
+  .screen-fade {
+    animation: none;
+  }
+
+  .btn,
+  .btn:hover,
+  .btn:active {
+    transition: none;
+    transform: none;
+  }
+}
