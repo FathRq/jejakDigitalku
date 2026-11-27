@@ -2,7 +2,7 @@
 
 Simulasi **visual novel** literasi digital untuk siswa: penipuan online, hoaks, dan privasi data. Peserta masuk dengan kode anonim, mengerjakan pre-test, membuat profil fiktif, memainkan tiga skenario, lalu melihat rapor digital, post-test, dan kuesioner.
 
-Dibangun dengan **React 19 + Vite 8 + Tailwind CSS 4**. Tanpa backend: progres disimpan di `localStorage`, hasil bisa diunduh sebagai JSON atau dikirim ke endpoint opsional.
+Dibangun dengan **React 19 + Vite 8 + Tailwind CSS 4**. Progres disimpan di `localStorage`; hasil bisa dikirim ke server lokal (file JSON), Google Apps Script, atau diunduh manual.
 
 ## Menjalankan
 
@@ -17,6 +17,7 @@ Buka `http://localhost:5173`.
 npm run build    # build produksi ke dist/
 npm run preview  # pratinjau hasil build
 npm run lint     # cek ESLint
+npm run assets   # konversi aset desain ke WebP
 ```
 
 ## Alur
@@ -40,13 +41,34 @@ Tiga indikator: **Privasi**, **Reputasi**, **Keamanan** (mulai 100, dibatasi 0�
 
 ## Pengiriman hasil
 
-Salin `.env.example` menjadi `.env` lalu isi:
+Salin `.env.example` menjadi `.env` lalu pilih salah satu opsi:
+
+### Server lokal 
+
+Jalankan server bawaan yang menyimpan tiap sesi ke `data/results.json`:
 
 ```bash
-VITE_SUBMIT_URL=https://script.google.com/macros/s/.../exec
+# Terminal 1 — jalankan server penerima data
+npm run server
+
+# Terminal 2 — jalankan Vite seperti biasa
+npm run dev
 ```
 
-Payload dikirim sebagai `text/plain` (menghindari preflight CORS pada Apps Script). Tanpa variabel ini, hasil tetap lokal dan peserta dapat mengunduh `jejak-digitalku-<kode>.json`.
+Lalu isi `.env`:
+
+```env
+VITE_SUBMIT_URL=http://localhost:3001/submit
+```
+
+Setiap sesi yang selesai akan ditambahkan sebagai entri baru di `data/results.json` (array JSON). Log konfirmasi muncul di terminal server.
+
+
+### Tanpa konfigurasi
+
+Jika `VITE_SUBMIT_URL` dikosongkan, hasil tetap tersimpan di `localStorage` dan peserta dapat mengunduh `jejak-digitalku-<kode>.json` secara manual dari layar Selesai.
+
+---
 
 Payload mencakup: timestamp, kode peserta, profil fiktif, skor pre/post-test, skor akhir, pilihan tiap skenario, jawaban SUS, skor SUS, jawaban kepuasan, masukan, dan durasi sesi. Tidak ada nama asli, email, atau nomor telepon.
 
@@ -75,6 +97,9 @@ src/
   App.jsx     state machine layar
 scripts/
   prepare-assets.py
+server.js     server lokal penerima data (Opsi A)
+data/
+  results.json  hasil sesi peserta (dibuat otomatis saat server dijalankan)
 ```
 
 ## Catatan

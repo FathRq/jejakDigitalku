@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "assets": "python scripts/prepare-assets.py"
+    "assets": "python scripts/prepare-assets.py",
+    "server": "node server.js",
+    "dev:full": "start node server.js && vite"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.5",
